@@ -1,1 +1,508 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden's Diary - Gardening Task Management App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 50%, #ebf8ff 100%);
+        }
+        .app-screen {
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+            border-radius: 30px;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-leaf text-emerald-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-emerald-600">Garden's Diary</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#preview" class="text-gray-700 hover:text-emerald-600 px-3 py-2 text-sm font-medium">Preview</a>
+    
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-emerald-600 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="#features" class="text-gray-700 hover:text-emerald-600 block px-3 py-2 text-base font-medium">Features</a>
+                <a href="#preview" class="text-gray-700 hover:text-emerald-600 block px-3 py-2 text-base font-medium">Preview</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                        Share your gardening tasks the easy way with your colleagues
+                        <span class="text-emerald-600">— ensuring the prosperity of your green oasis.</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        A dedicated system to manage, share, and track garden tasks with your team.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#download" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-lg text-center shadow-lg transition duration-300">
+                            <i class="fa fa-info-circle"></i> Find Out How
+                        </a>
+
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative max-w-md">
+                        <div class="app-screen bg-white p-4 rounded-3xl overflow-hidden">
+                            <img src="https://via.placeholder.com/300x600/e5f5e0/10b981?text=Garden's+Diary+App" alt="App Preview" class="rounded-2xl">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-emerald-200 rounded-full -z-10"></div>
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-emerald-100 rounded-full -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-emerald-600 font-semibold tracking-wide uppercase">The Gardening Challenge</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    No easy way to share gardening tasks?
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Info gets lost, tasks repeat, and plants suffer.
+                </p>
+            </div>
+
+            <div class="mt-16 bg-emerald-50 rounded-xl p-8 md:p-12">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://via.placeholder.com/500x400/e5f5e0/10b981?text=Garden+Team+Working" alt="Gardening Team" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">The Garden's Diary Solution</h3>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Garden's Diary lets you register tasks, set reminders, share photos, and collaborate seamlessly with your gardening team. Never miss a watering or pruning schedule again.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-emerald-500 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-700">
+                                    <span class="font-semibold">Centralized task management</span> - All gardening tasks in one place
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-emerald-500 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-700">
+                                    <span class="font-semibold">Real-time collaboration</span> - See updates from your team instantly
+                                </p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-emerald-500 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-3 text-base text-gray-700">
+                                    <span class="font-semibold">Plant health tracking</span> - Monitor your garden's progress over time
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-16">
+                <h2 class="text-base text-emerald-600 font-semibold tracking-wide uppercase">Features</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Everything you need to manage your garden
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Designed for professional gardeners and gardening teams
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-emerald-100 text-emerald-600 mb-4">
+                        <i class="fas fa-tasks text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Daily Task Summaries</h3>
+                    <p class="text-gray-600">
+                        Get a clear overview of daily, weekly, and monthly gardening tasks with smart reminders.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-emerald-100 text-emerald-600 mb-4">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Progress Tracking</h3>
+                    <p class="text-gray-600">
+                        Monitor plant growth and garden development with visual progress tracking.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-emerald-100 text-emerald-600 mb-4">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Team Collaboration</h3>
+                    <p class="text-gray-600">
+                        Assign tasks, share updates, and communicate with your gardening team in one place.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-emerald-100 text-emerald-600 mb-4">
+                        <i class="fas fa-camera text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Photo Logs & Notes</h3>
+                    <p class="text-gray-600">
+                        Document your garden's journey with photos and detailed notes for future reference.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Preview -->
+    <section id="preview" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-emerald-600 font-semibold tracking-wide uppercase">App Preview</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    See Garden's Diary in action
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="bg-white p-4 rounded-xl shadow-lg">
+                        <img src="https://via.placeholder.com/300x600/e5f5e0/10b981?text=App+Interface" alt="App Interface" class="rounded-lg">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Task Management</h3>
+                            <p class="text-gray-600">
+                                Easily create, assign, and track gardening tasks with clear deadlines and priorities.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Garden Profiles</h3>
+                            <p class="text-gray-600">
+                                Maintain detailed profiles for each garden you manage (e.g., Backyard Garden, Client A's Landscape).
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Plant Tracking</h3>
+                            <p class="text-gray-600">
+                                Monitor individual plants with care logs (e.g., Monstera last logged 3 days ago, needs fertilizing next week).
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Seasonal Planning</h3>
+                            <p class="text-gray-600">
+                                Plan ahead with seasonal task templates and weather integration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing/Revenue Model -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center mb-12">
+                <h2 class="text-base text-emerald-600 font-semibold tracking-wide uppercase">Simple Pricing</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Free to start — grow with your needs
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Unlock premium features or enjoy ad-supported simplicity
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Free Tier -->
+                <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-lg font-medium text-gray-900">Free</h3>
+                        <p class="mt-4 text-sm text-gray-500">
+                            Perfect for individual gardeners and small teams
+                        </p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">€0</span>
+                            <span class="text-base font-medium text-gray-500">/month</span>
+                        </p>
+                        <a href="#download" class="mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium bg-emerald-100 text-emerald-700 hover:bg-emerald-200">
+                            Get started
+                        </a>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h4 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h4>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Basic task management</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Single garden entry</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Access to gardening calendar</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Limited plant database</p>
+                            </li>
+							<li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Banner ads or occasional full-screen ads</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pro Tier -->
+                <div class="border border-emerald-500 rounded-lg shadow-sm divide-y divide-gray-200">
+                    <div class="p-6">
+                        <div class="flex justify-between">
+                            <h3 class="text-lg font-medium text-gray-900">Pro</h3>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500">
+                            For professional gardeners and growing teams
+                        </p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">€20</span>
+                            <span class="text-base font-medium text-gray-500">/year</span>
+                        </p>
+                        <a href="#download" class="mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium bg-emerald-600 text-white hover:bg-emerald-700">
+                            Upgrade now
+                        </a>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h4 class="text-xs font-medium text-gray-900 tracking-wide uppercase">Everything in Free, plus</h4>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Advanced task management</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Unlimited garden entry</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Access to gardening calendar</p>
+                            </li>
+							<li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Unlimited plant database</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Team collaboration tools</p>
+                            </li>
+							<li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Sync across devices & cloud backup</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">Advanced reporting</p>
+                            </li>
+							<li class="flex items-start">
+                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="ml-3 text-sm text-gray-500">No ads</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+          
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="gradient-bg py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Want to learn more about Garden's Diary?
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Get personalized advice on how our app can transform your gardening workflow. Our experts are ready to answer all your questions.
+            </p>
+            <div class="flex justify-center">
+                <a href="#contact-form" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-lg text-center shadow-lg transition duration-300 inline-flex items-center">
+                    <i class="fas fa-envelope mr-3"></i> Contact Our Team
+                </a>
+            </div>
+            <p class="mt-8 text-sm text-gray-600">
+                Or explore our <a href="#features" class="text-emerald-600 hover:underline">features</a> and <a href="#preview" class="text-emerald-600 hover:underline">app preview</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center">
+                        <i class="fas fa-leaf text-emerald-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-emerald-600">Garden's Diary</span>
+                    </div>
+                    <p class="mt-4 text-gray-500 text-sm">
+                        Helping professional gardeners and gardening teams manage their tasks efficiently since 2020. Join the green revolution in garden management.
+                    </p>
+                    <div class="mt-6 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-emerald-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-emerald-500">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-emerald-600">Community</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-emerald-600">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-emerald-600">Guides</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-emerald-600">Webinars</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-emerald-600">About</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-emerald-600">Careers</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-emerald-600">Contact</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-emerald-600">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-200 pt-8">
+                <p class="text-base text-gray-400 text-center">
+                    &copy; 2023 Garden's Diary, Inc. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    if(this.getAttribute('href') === '#') return;
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(!mobileMenu.classList.contains('hidden')) {
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
