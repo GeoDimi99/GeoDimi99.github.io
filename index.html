@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 50%, #ebf8ff 100%);
+            background: #c9edc9; /*linear-gradient(135deg, #f0fff4 0%, #e6fffa 50%, #ebf8ff 100%); */
         }
         .app-screen {
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
@@ -79,9 +79,9 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center">
                     <div class="relative max-w-xl">
-                        <div class="app-screen bg-white p-4 rounded-3xl overflow-hidden">
+                        <!-- <div class="app-screen bg-white p-4 rounded-3xl overflow-hidden"> -->
                             <img src="images/gardeners.png" alt="App Preview" class="rounded-2xl w-full">
-                        </div>
+                        <!-- </div> -->
                         <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-emerald-200 rounded-full -z-10"></div>
                         <div class="absolute -top-6 -right-6 w-24 h-24 bg-emerald-100 rounded-full -z-10"></div>
                     </div>
@@ -103,11 +103,11 @@
                 </p>
             </div>
 
-            <div class="mt-16 bg-emerald-50 rounded-xl p-8 md:p-12">
+            <div class="mt-16 bg-[#c9edc9] rounded-xl p-8 md:p-12">
                 <div class="md:flex items-center">
-                    <div class="md:w-1/2 mb-8 md:mb-0">
-                        <img src="images/collaboration.png" alt="Gardening Team" class="rounded-lg shadow-lg">
-                    </div>
+                    <div class="md:w-1/2 mb-8 md:mb-0"> 
+                        <img src="images/collaboration.png" alt="Gardening Team" >
+                    </div> 
                     <div class="md:w-1/2 md:pl-12">
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">The Garden's Diary Solution</h3>
                         <p class="text-lg text-gray-600 mb-6">
@@ -255,175 +255,114 @@
     </section>
 
     <!-- Pricing/Revenue Model -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center mb-12">
-                <h2 class="text-base text-emerald-600 font-semibold tracking-wide uppercase">Simple Pricing</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Free to start — grow with your needs
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    Unlock premium features or enjoy ad-supported simplicity
-                </p>
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center mb-12">
+            <h2 class="text-base text-emerald-600 font-semibold tracking-wide uppercase">Simple Pricing</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Free to start — grow with your needs
+            </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                Unlock premium features or enjoy ad-supported simplicity
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Free Tier -->
+            <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
+                <div class="p-6">
+                    <h3 class="text-lg font-medium text-gray-900">Free</h3>
+                    <p class="mt-4 text-sm text-gray-500">
+                        Perfect for individual gardeners and small teams
+                    </p>
+                    <p class="mt-8">
+                        <span class="text-4xl font-extrabold text-gray-900">€0</span>
+                        <span class="text-base font-medium text-gray-500">/month</span>
+                    </p>
+                    <a href="#download" class="mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium bg-emerald-100 text-emerald-700 hover:bg-emerald-200">
+                        Get started
+                    </a>
+                </div>
+                <div class="pt-6 pb-8 px-6">
+                    <h4 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h4>
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Basic task management</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Single garden entry</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Access to gardening calendar</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Limited plant database</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Banner ads or occasional full-screen ads</p></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Free Tier -->
-                <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
-                    <div class="p-6">
-                        <h3 class="text-lg font-medium text-gray-900">Free</h3>
-                        <p class="mt-4 text-sm text-gray-500">
-                            Perfect for individual gardeners and small teams
-                        </p>
-                        <p class="mt-8">
-                            <span class="text-4xl font-extrabold text-gray-900">€0</span>
-                            <span class="text-base font-medium text-gray-500">/month</span>
-                        </p>
-                        <a href="#download" class="mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium bg-emerald-100 text-emerald-700 hover:bg-emerald-200">
-                            Get started
-                        </a>
+            <!-- Pro Tier -->
+            <div class="border border-emerald-500 rounded-lg shadow-sm divide-y divide-gray-200">
+                <div class="p-6">
+                    <div class="flex justify-between">
+                        <h3 class="text-lg font-medium text-gray-900">Pro</h3>
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">Save 20%</span>
                     </div>
-                    <div class="pt-6 pb-8 px-6">
-                        <h4 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h4>
-                        <ul class="mt-6 space-y-4">
-                            <li class="flex items-start">
-                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <p class="ml-3 text-sm text-gray-500">Basic task management</p>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <p class="ml-3 text-sm text-gray-500">Single garden entry</p>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <p class="ml-3 text-sm text-gray-500">Access to gardening calendar</p>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <p class="ml-3 text-sm text-gray-500">Limited plant database</p>
-                            </li>
-							<li class="flex items-start">
-                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <p class="ml-3 text-sm text-gray-500">Banner ads or occasional full-screen ads</p>
-                            </li>
-                        </ul>
+                    <p class="mt-4 text-sm text-gray-500">
+                        For professional gardeners and growing teams
+                    </p>
+                    <div class="mt-6">
+                        <span class="text-4xl font-extrabold text-gray-900">€9.99</span>
+                        <span class="text-base font-medium text-gray-500">/month</span>
                     </div>
+                    <div class="mt-4">
+                        <span class="text-2xl font-extrabold text-emerald-600">€7.99</span>
+                        <span class="text-base font-medium text-gray-500">/month</span>
+                        <span class="ml-2 text-sm text-gray-500">(billed annually at €95.88)</span>
+                    </div>
+                    <a href="#download" class="mt-6 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium bg-emerald-600 text-white hover:bg-emerald-700">
+                        Upgrade now
+                    </a>
                 </div>
-
-                
-
-                <!-- Pro Tier -->
-                <div class="border border-emerald-500 rounded-lg shadow-sm divide-y divide-gray-200">
-                    <div class="p-6">
-                        <div class="flex justify-between">
-                            <h3 class="text-lg font-medium text-gray-900">Pro</h3>
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
-                                Save 20%
-                            </span>
-                        </div>
-                        <p class="mt-4 text-sm text-gray-500">
-                            For professional gardeners and growing teams
-                        </p>
-                        
-                        <!-- Monthly Price -->
-                        <div class="mt-6">
-                            <span class="text-4xl font-extrabold text-gray-900">€9.99</span>
-                            <span class="text-base font-medium text-gray-500">/month</span>
-                        </div>
-                        
-                        <!-- Yearly Price (20% off) -->
-                        <div class="mt-4">
-                            <span class="text-2xl font-extrabold text-emerald-600">€7.99</span>
-                            <span class="text-base font-medium text-gray-500">/month</span>
-                            <span class="ml-2 text-sm text-gray-500">(billed annually at €95.88)</span>
-                        </div>
-                        
-                        <!-- Toggle Switch -->
-                        <div class="mt-4 flex items-center">
-                            <span class="text-sm font-medium text-gray-500 mr-3">Monthly</span>
-                            <button type="button" class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2" role="switch">
-                                <span class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
-                            </button>
-                            <span class="text-sm font-medium text-gray-500 ml-3">Yearly (-20%)</span>
-                        </div>
-
-                        <a href="#download" class="mt-6 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium bg-emerald-600 text-white hover:bg-emerald-700">
-                            Upgrade now
-                        </a>
-                    </div>
-                    
-                    <!-- Features list remains the same -->
-                    <div class="pt-6 pb-8 px-6">
-                        <h4 class="text-xs font-medium text-gray-900 tracking-wide uppercase">Everything in Free, plus</h4>
-                        <ul class="mt-6 space-y-4">
-                            <!-- ... your existing feature list items ... -->
-                            <li class="flex items-start">
-                                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                                    <i class="fas fa-check"></i>
-                                                </div>
-                                                <p class="ml-3 text-sm text-gray-500">Advanced task management</p>
-                                            </li>
-                                            <li class="flex items-start">
-                                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                                    <i class="fas fa-check"></i>
-                                                </div>
-                                                <p class="ml-3 text-sm text-gray-500">Unlimited garden entry</p>
-                                            </li>
-                                            <li class="flex items-start">
-                                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                                    <i class="fas fa-check"></i>
-                                                </div>
-                                                <p class="ml-3 text-sm text-gray-500">Access to gardening calendar</p>
-                                            </li>
-                                            <li class="flex items-start">
-                                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                                    <i class="fas fa-check"></i>
-                                                </div>
-                                                <p class="ml-3 text-sm text-gray-500">Unlimited plant database</p>
-                                            </li>
-                                            <li class="flex items-start">
-                                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                                    <i class="fas fa-check"></i>
-                                                </div>
-                                                <p class="ml-3 text-sm text-gray-500">Team collaboration tools</p>
-                                            </li>
-                                            <li class="flex items-start">
-                                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                                    <i class="fas fa-check"></i>
-                                                </div>
-                                                <p class="ml-3 text-sm text-gray-500">Sync across devices & cloud backup</p>
-                                            </li>
-                                            <li class="flex items-start">
-                                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                                    <i class="fas fa-check"></i>
-                                                </div>
-                                                <p class="ml-3 text-sm text-gray-500">Advanced reporting</p>
-                                            </li>
-                                            <li class="flex items-start">
-                                                <div class="flex-shrink-0 h-5 w-5 text-emerald-500">
-                                                    <i class="fas fa-check"></i>
-                                                </div>
-                                                <p class="ml-3 text-sm text-gray-500">No ads</p>
-                                            </li>
-                        </ul>
-                    </div>
+                <div class="pt-6 pb-8 px-6">
+                    <h4 class="text-xs font-medium text-gray-900 tracking-wide uppercase">Everything in Free, plus</h4>
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Advanced task management</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Unlimited garden entry</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Unlimited plant database</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Team collaboration tools</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Sync across devices & cloud backup</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Advanced reporting</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">No ads</p></li>
+                    </ul>
                 </div>
+            </div>
 
-          
-
+            <!-- Business Tier -->
+            <div class="border border-gray-300 rounded-lg shadow-sm divide-y divide-gray-200">
+                <div class="p-6">
+                    <h3 class="text-lg font-medium text-gray-900">Business</h3>
+                    <p class="mt-4 text-sm text-gray-500">
+                        Designed for organizations and enterprise gardening teams
+                    </p>
+                    <div class="mt-6">
+                        <span class="text-3xl font-extrabold text-gray-900">€6.99</span>
+                        <span class="text-base font-medium text-gray-500">/month for user</span>
+                        <span class="ml-2 text-sm text-gray-500">(up to 10 users)</span>
+                    </div>
+                    <a href="#contact" class="mt-6 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium bg-gray-800 text-white hover:bg-gray-900">
+                        Contact sales
+                    </a>
+                </div>
+                <div class="pt-6 pb-8 px-6">
+                    <h4 class="text-xs font-medium text-gray-900 tracking-wide uppercase">Everything in Pro, plus</h4>
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Up to 10 team members</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Priority customer support</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Custom onboarding assistance</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Admin controls and usage analytics</p></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-500 w-5 h-5"></i><p class="ml-3 text-sm text-gray-500">Dedicated account manager</p></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Final CTA -->
     <section id="contact" class="gradient-bg py-16">
@@ -451,7 +390,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="col-span-2">
                     <div class="flex items-center">
-                        <i class="fas fa-leaf text-emerald-500 text-2xl mr-2"></i>
+                        <img src="images/logo.png" alt="Garden's Diary Logo" width="10%"  class="logo">
                         <span class="text-xl font-bold text-emerald-600">Garden's Diary</span>
                     </div>
                     <p class="mt-4 text-gray-500 text-sm">
